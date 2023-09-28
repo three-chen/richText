@@ -74,6 +74,40 @@ var PrototypeButton = /** @class */ (function () {
     return PrototypeButton;
 }());
 
+var EventEmitter = /** @class */ (function () {
+    function EventEmitter() {
+    }
+    /**
+     * 监听事件
+     * @param event 事件名
+     * @param listener 监听函数
+     */
+    EventEmitter.on = function (event, listener) {
+        if (!this.listeners.has(event)) {
+            this.listeners.set(event, []);
+        }
+        this.listeners.get(event).push(listener);
+    };
+    /**
+     * 触发事件
+     * @param event 事件名
+     * @param args 参数
+     */
+    EventEmitter.emit = function (event) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        if (this.listeners.has(event)) {
+            var events = this.listeners.get(event);
+            events.forEach(function (listener) { return listener.apply(void 0, args); });
+        }
+    };
+    EventEmitter.listeners = new Map();
+    return EventEmitter;
+}());
+
+console.log(EventEmitter.listeners);
 var BoldButton = /** @class */ (function (_super) {
     __extends(BoldButton, _super);
     function BoldButton() {
