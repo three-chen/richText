@@ -1,0 +1,39 @@
+.toolbar-button {
+    position: relative;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+
+    .toolbar-button-tooltip {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #464646;
+        color: #ffffff;
+        padding: 2px;
+        border-radius: 4px;
+        width: fit-content;
+        min-width: 100%;
+        height: fit-content;
+        transition: opacity ease-in-out 0.3s, top ease-in-out 0.3s;
+    }
+
+    .toolbar-button-tooltip-inactive {
+        opacity: 0;
+        top: 0%;
+    }
+
+    .toolbar-button-tooltip-active {
+        opacity: 1;
+        top: -80%;
+    }
+
+    .toolbar-button-icon {
+        width: 100%;
+        height: 100%;
+    }
+}

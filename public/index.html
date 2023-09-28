@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+    </style>
+    <link rel="stylesheet" href="./RichText.css">
+</head>
+
+<body>
+    <h1>测试富文本编辑</h1>
+    <div class="textBox">
+    </div>
+    <script type="module">
+        import RichText from './RichText.js';
+        const textBox = document.querySelector('.textBox');
+        const richText = new RichText();
+        richText.mount(textBox);
+    </script>
+</body>
+
+</html>
