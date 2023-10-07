@@ -1,5 +1,7 @@
 import './editor.scss'
 
+// import { richTextState, selectionState, setSelectionState } from '@/store/richTextStore'
+
 export default class Editor {
     private _editor: HTMLDivElement | null = null;
 
@@ -10,8 +12,49 @@ export default class Editor {
     }
 
     public init(editor: HTMLElement) {
+        const that = this;
         editor.classList.add('richText-editor');
-        editor.ariaPlaceholder = 'Enter your text here';
         editor.contentEditable = "true";
+
+        that.toggle('bold')
+
+        editor.addEventListener('input', that.onInput.bind(that));
+        editor.addEventListener('mouseup', that.onMouseUp.bind(that));
     }
+
+    public setInnerHTML(html: string) {
+        this._editor!.innerHTML = html;
+    }
+
+    public onInput() {
+        console.log('input', this._editor!.innerHTML);
+
+        // setSelectionState(document.getSelection());
+    }
+
+    public toggle(string: string) {
+        // const selection = window.getSelection();
+        // if (selection) {
+        //     const range = selection.getRangeAt(0);
+        //     const span = document.createElement('span');
+        //     span.style.fontWeight = 'bold';
+        //     range.surroundContents(span);
+        // }
+    }
+
+    public onMouseUp() {
+        // const selection = window.getSelection();
+        // if (selection) {
+        //     const range = selection.getRangeAt(0);
+        //     console.log(range);
+
+        //     const span = document.createElement('span');
+        //     span.style.fontWeight = 'bold';
+        //     range.surroundContents(span);
+        // }
+
+        // setSelectionState(document.getSelection());
+        // console.log('onMouseUp', selectionState);
+    }
+
 }

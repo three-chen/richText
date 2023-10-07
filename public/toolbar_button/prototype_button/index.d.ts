@@ -1,6 +1,11 @@
 import './index.scss';
+interface Config {
+    id: string;
+    label: string;
+    type: string;
+}
 export default class PrototypeButton {
-    _el: HTMLElement;
+    _el: HTMLButtonElement | HTMLInputElement;
     protected _id: string;
     protected _label: string;
     protected _icon: string;
@@ -15,6 +20,7 @@ export default class PrototypeButton {
      * @param icon 图像资源，我这里是svg
      * @param onClick 点击事件
      */
-    constructor(id: string, label: string, icon: string, onClick: () => void);
-    init(el: HTMLElement): void;
+    constructor(config: Config, icon: string, onClick: () => void);
+    init(el: HTMLButtonElement, type: string): void;
 }
+export {};
