@@ -18,6 +18,7 @@
   padding-left: 2rem;
 }
 .richText-editor ul li {
+  list-style: disc;
   --tw-text-opacity: 1;
   color: rgb(64 72 100/var(--tw-text-opacity));
   font-size: 1rem;
@@ -69,6 +70,7 @@
   top: -100%;
 }
 .richText-toolbar-button .richText-toolbar-button-icon {
+  display: flex;
   width: 100%;
   height: 100%;
   padding: 4px;
