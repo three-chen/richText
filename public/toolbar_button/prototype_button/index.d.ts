@@ -22,5 +22,10 @@ export default class PrototypeButton {
      */
     constructor(config: Config, icon: string, onClick: () => void);
     init(el: HTMLButtonElement, type: string): void;
+    /**
+     * 如果document.getSelection()没有光标，将光标设置为editor元素的末尾，如果有光标，则还是原来的
+     * @param editor 给editor元素设置光标
+     */
+    setSelection(editor: HTMLDivElement): void;
 }
 export {};

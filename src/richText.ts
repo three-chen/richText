@@ -2,7 +2,6 @@ import Toolbar from "./toolbar";
 import Editor from "./editor";
 
 class RichText {
-    private _text: string;
     private _el: HTMLElement;
 
     private _toolbar: Toolbar;
@@ -16,6 +15,10 @@ class RichText {
         this._el = el;
         this._editor = new Editor(this._el);
         this._toolbar = new Toolbar(this._el);
+    }
+
+    public getHTML() {
+        return this._editor.getInnerHTML();
     }
 }
 

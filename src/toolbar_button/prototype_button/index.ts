@@ -101,4 +101,21 @@ export default class PrototypeButton {
         break;
     }
   }
+
+
+  /**
+   * 如果document.getSelection()没有光标，将光标设置为editor元素的末尾，如果有光标，则还是原来的
+   * @param editor 给editor元素设置光标
+   */
+  public setSelection(editor: HTMLDivElement) {
+    const sel = window.getSelection();
+
+    if (sel.focusNode === null) {
+      const range = document.createRange();
+      range.selectNodeContents(editor);
+      range.collapse(false); // 将光标折叠到末尾
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+  }
 }

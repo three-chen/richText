@@ -13,19 +13,20 @@ module.exports = [
         // output: [
         //     {
         //         dir: 'dist',
-        //         format: 'esm',
-        //         entryFileNames: 'richText.js',
-        //         sourcemap: true, // 是否输出sourcemap
+        //         format: 'cjs',
+        //         entryFileNames: 'RichText.js',
+        //         sourcemap: false, // 是否输出sourcemap
         //         plugins: [terser()],
         //     },
         // ],
         output: [
             {
                 dir: 'public',
-                format: 'esm',
-                entryFileNames: 'richText.js',
+                format: 'umd',
+                name: 'RichText', // 指定一个全局变量名称，
+                entryFileNames: 'RichText.js',
                 sourcemap: true, // 是否输出sourcemap
-                // plugins: [terser()],
+                plugins: [terser()],
             },
         ],
         plugins: [

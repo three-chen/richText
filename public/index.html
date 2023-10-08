@@ -21,8 +21,7 @@
             display: flex;
             flex-direction: column;
             width: 500px;
-            height: 500px;
-            ;
+            min-height: 500px;
             border: 1px solid rgb(27, 27, 27);
         }
     </style>
@@ -34,8 +33,14 @@
     <p>Content</p>
     <div class="textBox">
     </div>
-    <script type="module">
+    <!-- <script type="module">
         import RichText from './RichText.js';
+        const textBox = document.querySelector('.textBox');
+        const richText = new RichText();
+        richText.mount(textBox);
+    </script> -->
+    <script src="./richText.js"></script>
+    <script>
         const textBox = document.querySelector('.textBox');
         const richText = new RichText();
         richText.mount(textBox);

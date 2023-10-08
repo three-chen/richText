@@ -1,9 +1,9 @@
 declare class RichText {
-    private _text;
     private _el;
     private _toolbar;
     private _editor;
     constructor();
     mount(el: HTMLElement): void;
+    getHTML(): string;
 }
 export default RichText;
