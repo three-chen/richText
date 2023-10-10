@@ -20,6 +20,14 @@ class RichText {
     public getHTML() {
         return this._editor.getInnerHTML();
     }
+
+    public getElement() {
+        return this._editor.getInnerElement();
+    }
+
+    public clear() {
+        this._editor.clear();
+    }
 }
 
 export default RichText

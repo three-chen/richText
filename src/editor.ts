@@ -21,4 +21,16 @@ export default class Editor {
     public getInnerHTML(): string {
         return this._editor!.innerHTML
     }
+
+    public setInnerHTML(html: string) {
+        this._editor!.innerHTML = html;
+    }
+
+    public getInnerElement(): HTMLElement | null {
+        return this._editor!
+    }
+
+    public clear() {
+        this.setInnerHTML('')
+    }
 }

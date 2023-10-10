@@ -5,5 +5,7 @@ declare class RichText {
     constructor();
     mount(el: HTMLElement): void;
     getHTML(): string;
+    getElement(): HTMLElement;
+    clear(): void;
 }
 export default RichText;

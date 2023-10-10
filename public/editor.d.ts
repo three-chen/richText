@@ -4,4 +4,7 @@ export default class Editor {
     constructor(container: HTMLElement);
     init(editor: HTMLElement): void;
     getInnerHTML(): string;
+    setInnerHTML(html: string): void;
+    getInnerElement(): HTMLElement | null;
+    clear(): void;
 }

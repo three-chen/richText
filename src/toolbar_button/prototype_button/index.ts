@@ -32,22 +32,22 @@ export default class PrototypeButton {
     that.isActivate = false
     that._protobtnClick = onClick
 
-    that._protobtnMouseEnter = () => {
-      // toolbar-button
-      that._el.classList.add('richText-toolbar-button-hover')
+    // that._protobtnMouseEnter = () => {
+    // toolbar-button
+    // that._el.classList.add('richText-toolbar-button-hover')
 
-      // tooltip
-      that._el.children[0].classList.remove('richText-toolbar-button-tooltip-inactive')
-      that._el.children[0].classList.add('richText-toolbar-button-tooltip-active')
-    }
-    that._protobtnMouseLeave = () => {
-      // toolbar-button
-      that._el.classList.remove('richText-toolbar-button-hover')
+    // tooltip
+    // that._el.children[0].classList.remove('richText-toolbar-button-tooltip-inactive')
+    // that._el.children[0].classList.add('richText-toolbar-button-tooltip-active')
+    // }
+    // that._protobtnMouseLeave = () => {
+    // toolbar-button
+    // that._el.classList.remove('richText-toolbar-button-hover')
 
-      // tooltip
-      that._el.children[0].classList.remove('richText-toolbar-button-tooltip-active')
-      that._el.children[0].classList.add('richText-toolbar-button-tooltip-inactive')
-    }
+    // tooltip
+    // that._el.children[0].classList.remove('richText-toolbar-button-tooltip-active')
+    // that._el.children[0].classList.add('richText-toolbar-button-tooltip-inactive')
+    // }
     that.init(that._el, config.type)
   }
 
@@ -66,15 +66,15 @@ export default class PrototypeButton {
     // })
 
     // tooltip
-    const tootip = document.createElement('div')
-    tootip.innerText = that._label
-    tootip.classList.add('richText-toolbar-button-tooltip')
-    tootip.classList.add('richText-toolbar-button-tooltip-inactive')
-    el.appendChild(tootip)
+    // const tootip = document.createElement('div')
+    // tootip.innerText = that._label
+    // tootip.classList.add('richText-toolbar-button-tooltip')
+    // tootip.classList.add('richText-toolbar-button-tooltip-inactive')
+    // el.appendChild(tootip)
 
     // tooltip event
-    el.addEventListener('mouseenter', that._protobtnMouseEnter)
-    el.addEventListener('mouseleave', that._protobtnMouseLeave)
+    // el.addEventListener('mouseenter', that._protobtnMouseEnter)
+    // el.addEventListener('mouseleave', that._protobtnMouseLeave)
 
     // icon
     const icon = document.createElement('div')

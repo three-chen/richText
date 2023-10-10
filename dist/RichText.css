@@ -12,19 +12,21 @@
   background-color: #f4f4f4;
   outline: none;
   padding: 0.5rem;
+  font-size: var(--font-size);
 }
 .richText-editor ul {
   list-style-type: disc;
   padding-left: 2rem;
 }
 .richText-editor ul li {
-  list-style: disc;
   --tw-text-opacity: 1;
+  list-style: disc;
   color: rgb(64 72 100/var(--tw-text-opacity));
-  font-size: 1rem;
+  font-size: var(--font-size);
   line-height: 1.5rem;
 }
 .richText-editor img {
+  position: relative;
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
@@ -38,36 +40,16 @@
   padding: 4px;
   display: flex;
   justify-content: center;
+  background-color: #f4f4f4;
+}
+.richText-toolbar-button:hover {
+  background-color: #dee0e2;
 }
 .richText-toolbar-button:active {
   background-color: #c8cbcf;
 }
 .richText-toolbar-button .richText-toolbar-button-input {
   display: none;
-}
-.richText-toolbar-button .richText-toolbar-button-tooltip {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #c8cbcf;
-  color: black;
-  padding: 2px;
-  border-radius: 4px;
-  width: -moz-fit-content;
-  width: fit-content;
-  min-width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  transition: opacity ease-in-out 0.3s, top ease-in-out 0.3s;
-}
-.richText-toolbar-button .richText-toolbar-button-tooltip-inactive {
-  opacity: 0;
-  top: 0%;
-}
-.richText-toolbar-button .richText-toolbar-button-tooltip-active {
-  opacity: 1;
-  top: -100%;
 }
 .richText-toolbar-button .richText-toolbar-button-icon {
   display: flex;
@@ -78,8 +60,4 @@
 .richText-toolbar-button .richText-toolbar-button-icon svg {
   --rt-color: #7c7c7c;
   color: var(--rt-color);
-}
-
-.richText-toolbar-button-hover {
-  background-color: #dee0e2;
 }

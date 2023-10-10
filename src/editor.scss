@@ -6,6 +6,7 @@
     background-color: #f4f4f4;
     outline: none;
     padding: .5rem;
+    font-size: var(--font-size);
 
     ul {
         list-style-type: disc;
@@ -15,7 +16,7 @@
             --tw-text-opacity: 1;
             list-style: disc;
             color: rgb(64 72 100/var(--tw-text-opacity));
-            font-size: 1rem;
+            font-size: var(--font-size);
             line-height: 1.5rem;
         }
     }

@@ -18,6 +18,7 @@
         }
 
         .textBox {
+            --font-size: 1rem;
             display: flex;
             flex-direction: column;
             width: 500px;
@@ -29,6 +30,7 @@
 </head>
 
 <body>
+    <img src="C:\Users\NERO\Pictures\1.png" alt="">
     <h1>测试富文本编辑</h1>
     <p>Content</p>
     <div class="textBox">
@@ -44,6 +46,9 @@
         const textBox = document.querySelector('.textBox');
         const richText = new RichText();
         richText.mount(textBox);
+        setTimeout(() => {
+            console.log(richText.getElement());
+        }, 5000)
     </script>
 </body>
 
