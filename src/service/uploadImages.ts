@@ -1,20 +1,3 @@
-function getFeatureCollection() {
-    const title = document.querySelector('#feature-input-title').value;
-    const contentEl = richText.getElement()
-    // if(validFeatureCollection()){}
-    submitFeatureCollection(title, contentEl);
-}
-
-function submitFeatureCollection(title, contentEl) {
-    uploadImages(contentEl).then((rtContent) => {
-        submitFromData(title, rtContent);
-    });
-}
-
-function submitFromData(title, content) {
-
-}
-
 function uploadImages(contentEl) {
     const images = contentEl.querySelectorAll('img');
     createImageUploadStatusBar(images);

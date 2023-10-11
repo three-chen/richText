@@ -1,6 +1,8 @@
 import Toolbar from "./toolbar";
 import Editor from "./editor";
 
+// import 
+
 class RichText {
     private _el: HTMLElement;
 
@@ -27,6 +29,13 @@ class RichText {
 
     public clear() {
         this._editor.clear();
+    }
+
+    /**
+     * 上传 this._editor 中的所有图片
+     */
+    public uploadImages() {
+
     }
 }
 
